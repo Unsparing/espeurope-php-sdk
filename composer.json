@@ -1,8 +1,8 @@
 {
-  "name": "twisted1919/mailwizz-php-sdk",
+  "name": "unsparing/espeurope-php-sdk",
   "type": "library",
-  "description": "Mailwizz PHP-SDK",
-  "keywords": ["mailwizz"],
+  "description": "ESPEUROPE PHP SDK",
+  "keywords": ["unsparing"],
   "homepage": "https://www.mailwizz.com",
   "license": "MIT",
   "authors": [
