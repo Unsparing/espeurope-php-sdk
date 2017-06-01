@@ -100,7 +100,7 @@ class MailWizzApi_Http_Request extends MailWizzApi_Base
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $client->timeout);
         curl_setopt($ch, CURLOPT_TIMEOUT, $client->timeout);
-        curl_setopt($ch, CURLOPT_USERAGENT , 'MailWizzApi Client version '. MailWizzApi_Http_Client::CLIENT_VERSION);
+        curl_setopt($ch, CURLOPT_USERAGENT , 'ESPEurope API Client version '. MailWizzApi_Http_Client::CLIENT_VERSION);
         curl_setopt($ch, CURLOPT_AUTOREFERER , true);
 
         if ($client->getResponseHeaders) {
@@ -227,7 +227,7 @@ class MailWizzApi_Http_Request extends MailWizzApi_Base
         $specialHeaderParams = array(
             'X-MW-PUBLIC-KEY'   => $publicKey,
             'X-MW-TIMESTAMP'    => $timestamp,
-            'X-MW-REMOTE-ADDR'  => isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '',
+            'X-MW-REMOTE-ADDR'  => isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '127.0.0.1',
         );
 
         foreach ($specialHeaderParams as $key => $value) {
